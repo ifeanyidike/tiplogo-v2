@@ -184,6 +184,11 @@ const ChangeOfCourseDetails = ({ setValue }) => {
                   <span>{order.orderItems && order.orderItems.type}</span>
                 </div>
 
+                <div>
+                  <span>Candidate's Exam Year:</span>
+                  <span>{order.orderItems && order.orderItems.year}</span>
+                </div>
+
                 <div className="fullwidth">
                   {order.orderItems &&
                     order.orderItems.choices &&

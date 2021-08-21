@@ -209,7 +209,6 @@ const ChangeOfCourseInstitution = () => {
     ) {
       subjectUpload.push(manualEntries.nineth)
     }
-
     return {
       transactionType: 'olevelresultupload',
 

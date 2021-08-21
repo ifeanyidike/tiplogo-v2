@@ -263,6 +263,7 @@ const OLevelUploadDetails = ({ setValue }) => {
                           <span>Grade</span>
                           <span>Exam Number</span>
                           <span>Exam Type</span>
+                          <span>Exam Year</span>
                         </div>
                         {order.orderItems.subjectUpload.map((result) => (
                           <div className="result_item" key={result._id}>
@@ -270,6 +271,7 @@ const OLevelUploadDetails = ({ setValue }) => {
                             <span>{result.grade}</span>
                             <span>{result.examNumber}</span>
                             <span>{result.examType}</span>
+                            <span>{result.examYear}</span>
                           </div>
                         ))}
                       </div>

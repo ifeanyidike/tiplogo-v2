@@ -43,7 +43,7 @@ const OLevelResultUploadSchema = mongoose.Schema(
           examType: {
             type: String,
           },
-          year: {
+          examYear: {
             type: String,
           },
         },
