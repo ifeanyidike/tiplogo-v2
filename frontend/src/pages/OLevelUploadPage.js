@@ -121,7 +121,7 @@ const ChangeOfCourseInstitution = () => {
     eighth: setEighthEntry,
     nineth: setNinethEntry,
   }
-  console.log(manualEntries)
+
   const [upload, setUpload] = useState({
     open: false,
     files: [],
@@ -152,56 +152,64 @@ const ChangeOfCourseInstitution = () => {
       manualEntries.first.examYear
     ) {
       subjectUpload.push(manualEntries.first)
-    } else if (
+    }
+    if (
       manualEntries.second.grade ||
       manualEntries.second.examNumber ||
       manualEntries.second.examType ||
       manualEntries.second.examYear
     ) {
       subjectUpload.push(manualEntries.second)
-    } else if (
+    }
+    if (
       manualEntries.third.grade ||
       manualEntries.third.examNumber ||
       manualEntries.third.examType ||
       manualEntries.third.examYear
     ) {
       subjectUpload.push(manualEntries.third)
-    } else if (
+    }
+    if (
       manualEntries.fourth.grade ||
       manualEntries.fourth.examNumber ||
       manualEntries.fourth.examType ||
       manualEntries.fourth.examYear
     ) {
       subjectUpload.push(manualEntries.fourth)
-    } else if (
+    }
+    if (
       manualEntries.fifth.grade ||
       manualEntries.fifth.examNumber ||
       manualEntries.fifth.examType ||
       manualEntries.fifth.examYear
     ) {
       subjectUpload.push(manualEntries.fifth)
-    } else if (
+    }
+    if (
       manualEntries.sixth.grade ||
       manualEntries.sixth.examNumber ||
       manualEntries.sixth.examType ||
       manualEntries.sixth.examYear
     ) {
       subjectUpload.push(manualEntries.sixth)
-    } else if (
+    }
+    if (
       manualEntries.seventh.grade ||
       manualEntries.seventh.examNumber ||
       manualEntries.seventh.examType ||
       manualEntries.seventh.examYear
     ) {
       subjectUpload.push(manualEntries.seventh)
-    } else if (
+    }
+    if (
       manualEntries.eighth.grade ||
       manualEntries.eighth.examNumber ||
       manualEntries.eighth.examType ||
       manualEntries.eighth.examYear
     ) {
       subjectUpload.push(manualEntries.eighth)
-    } else if (
+    }
+    if (
       manualEntries.nineth.grade ||
       manualEntries.nineth.examNumber ||
       manualEntries.nineth.examType ||

@@ -267,11 +267,11 @@ const OLevelUploadDetails = ({ setValue }) => {
                         </div>
                         {order.orderItems.subjectUpload.map((result) => (
                           <div className="result_item" key={result._id}>
-                            <span>{result.subject}</span>
-                            <span>{result.grade}</span>
-                            <span>{result.examNumber}</span>
-                            <span>{result.examType}</span>
-                            <span>{result.examYear}</span>
+                            <span>{result?.subject}</span>
+                            <span>{result?.grade}</span>
+                            <span>{result?.examNumber}</span>
+                            <span>{result?.examType}</span>
+                            <span>{result?.examYear}</span>
                           </div>
                         ))}
                       </div>

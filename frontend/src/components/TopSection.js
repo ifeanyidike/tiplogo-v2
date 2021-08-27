@@ -14,7 +14,7 @@ const TopSection = () => {
     dispatch(getAnnouncement())
   }, [dispatch])
   const { announcement } = useSelector((state) => state.announcement)
-  console.log(announcement)
+
   return (
     <div className="main-first-content">
       <ScreenDiv>
