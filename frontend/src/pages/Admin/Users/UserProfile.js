@@ -240,41 +240,43 @@ const UserProfile = () => {
             </CardContent>
           </Card>
 
-          <div className="carditems card__content__addPay">
-            <Card>
-              <CardContent>
-                <div className="heading">
-                  <h2>Add fund to {user.name} wallet</h2>
-                </div>
-                <FormControl
-                  fullWidth
-                  style={{ margin: '15px auto', width: 600 }}
-                  variant="outlined"
-                >
-                  <InputLabel htmlFor="outlined-adornment-amount">
-                    Amount
-                  </InputLabel>
-                  <OutlinedInput
-                    required
-                    type="number"
-                    id="outlined-adornment-amount"
-                    value={amount}
-                    onChange={(e) => setAmount(e.target.value)}
-                    startAdornment={
-                      <InputAdornment position="start">₦</InputAdornment>
-                    }
-                    labelWidth={60}
-                  />
-                </FormControl>
-                <AdminButtonPro
-                  color={colors.goldish}
-                  onClick={handleAddAmountToUser}
-                >
-                  Save
-                </AdminButtonPro>
-              </CardContent>
-            </Card>
-          </div>
+          {userInfo.isAdmin && (
+            <div className="carditems card__content__addPay">
+              <Card>
+                <CardContent>
+                  <div className="heading">
+                    <h2>Add fund to {user.name} wallet</h2>
+                  </div>
+                  <FormControl
+                    fullWidth
+                    style={{ margin: '15px auto', width: 600 }}
+                    variant="outlined"
+                  >
+                    <InputLabel htmlFor="outlined-adornment-amount">
+                      Amount
+                    </InputLabel>
+                    <OutlinedInput
+                      required
+                      type="number"
+                      id="outlined-adornment-amount"
+                      value={amount}
+                      onChange={(e) => setAmount(e.target.value)}
+                      startAdornment={
+                        <InputAdornment position="start">₦</InputAdornment>
+                      }
+                      labelWidth={60}
+                    />
+                  </FormControl>
+                  <AdminButtonPro
+                    color={colors.goldish}
+                    onClick={handleAddAmountToUser}
+                  >
+                    Save
+                  </AdminButtonPro>
+                </CardContent>
+              </Card>
+            </div>
+          )}
 
           <MessageModal
             open={deletePrompt}
