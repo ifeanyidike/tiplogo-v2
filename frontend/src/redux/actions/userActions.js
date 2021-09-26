@@ -872,6 +872,33 @@ export const creditWallet = (amount, paymentResult, method) => async (
   }
 }
 
+export const adminCreditWallet = (id, amount) => async (dispatch, getState) => {
+  try {
+    const {
+      userLogin: { userInfo },
+    } = getState()
+
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${userInfo.token}`,
+      },
+    }
+
+    await axios.put('/api/users/wallet/credit/admin', { id, amount }, config)
+
+    dispatch(getAUser(id))
+    dispatch(setMessage('Amount successfully added to user'))
+  } catch (error) {
+    const message =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message
+
+    dispatch(setMessage(message))
+  }
+}
+
 export const logout = () => (dispatch) => {
   localStorage.removeItem('userInfo')
   dispatch({

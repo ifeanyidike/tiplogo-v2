@@ -104,6 +104,13 @@ export const UserProfileContainer = styled.div`
       }
     }
   }
+
+  .card__content__addPay {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
   .carditems,
   .messagecontainer {
     grid-column: 1/10;
